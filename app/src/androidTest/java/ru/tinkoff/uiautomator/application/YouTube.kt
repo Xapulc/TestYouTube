@@ -17,9 +17,7 @@ class YouTube : AbstractApplication("com.google.android.youtube") {
     }
 
     fun waitAd() {
-        while (byStringText("На сайт рекламодателя").waitHasObject()) {
-            println("I skip ad")
-        }
+        while (byStringRes("com.google.android.youtube:id/ad_progress_text").waitHasObject()) {}
     }
 
     fun stop10Second() {
